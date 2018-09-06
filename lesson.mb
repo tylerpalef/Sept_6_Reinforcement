@@ -1,0 +1,97 @@
+JS functions and callbacks
+
+Scope:
+What does scope mean? The accessibility of methods/variables
+What is wrong with Global Variables? It can be changed anywhere. Harder to refactor.
+var book = 'The Hobbit';
+// This is a global variable because it does not exist within anything like a function.
+Instead, use:
+window.book = 'THe Hobbit'; // That is the convention
+
+function doStuff(){
+  console.log(elephant);
+  var elephant = 'Dumbo';
+  elephant = 'Dumbo';
+}
+
+doStuff();
+
+Javascript's scope Things on the outside can impact functions, but things on the inside cannot manipulate other functions.
+
+Why no implicit returns in JS?
+In Ruby we use the last evaluated expression
+It's sensible we should always declare return.
+So Ruby is just too dev friendly.
+Return demonstrates you know what your method is doing.
+
+If your function does not include Print or Display then you don't need a console log.
+
+Two most important things to think of when creating a function/method
+- Inputs
+  Arguments and parameters. Anything not passes into the argument will be set as undefined.
+- Outputs
+
+------------------------------------
+Callbacks
+in ruby
+  def get_number
+    return 5
+  end
+
+  def perform_actions(first, second)
+  end
+
+in JS
+
+  function getNumber(){
+  console.log(5)
+  return 5;
+  }
+
+  function performActions(first, second){
+  first();
+  second();
+  }
+
+  performActions(getNumber, getNumber);
+
+------------------------------------
+Functions as first class citizens
+
+slow;
+// function: slow;
+slow();
+//
+console.log(slow;
+console.log(slow());
+
+First order function. Would be:
+function timeMe(name, functionToTime){}
+  other functions
+When you have a function that accepts functions it is a higher level.
+When you pass a function instead of calling it, that is a callback
+
+This is a FOR loop on an anonymous function
+
+var items = ['wallet', 'fannypack'];
+for (var i = 0; i < items.length; i++){
+console.log(i);
+console.log(items[i]);
+}
+
+An each loop... can be called on an array
+
+items.forEach(function(item){
+  console.log(item);
+});
+
+That is basically this:
+items.forEach(function(item){
+  console.log(item);
+  console.log(index);
+  console.log(everything);
+});
+
+Synchronous
+
+Asynchronous
